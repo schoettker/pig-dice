@@ -7,6 +7,9 @@ body {
 h1 {
   text-align: center;
 }
+.ingame-content {
+  display: none;
+}
 .wrap-play-button {
   text-align: center;
 }
@@ -15,6 +18,7 @@ h1 {
   text-align: center;
 }
 #roll-info {
+  display: none;
   font-size: 20px;
   font-weight: bold;
 }

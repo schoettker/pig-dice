@@ -26,9 +26,11 @@ $(document).ready(function(){
     name = prompt("Enter a name for Player 2");
     var player2 = new Player(name, 0, 0);
     var currentPlayer = player1;
-    $("#play").slideUp();
+    $("#play").hide();
+    $(".ingame-content").fadeIn();
     currentPlayer.information();
     $("#roll").click(function(){
+      $("#roll-info").hide();
       var result = rollDice();
       if (result === 1){
         currentPlayer.turnTotal = 0;
@@ -38,10 +40,12 @@ $(document).ready(function(){
       } else {
         currentPlayer.turnTotal += result;
       }
+      $("#roll-info").fadeIn(1200);
       $("#roll-result").text(result);
       currentPlayer.information();
     });
     $("#hold").click(function(){
+      $("#roll-info").hide();
       currentPlayer.score += currentPlayer.turnTotal;
       currentPlayer.turnTotal = 0;
       currentPlayer.gameOver();
