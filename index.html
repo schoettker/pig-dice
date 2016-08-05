@@ -17,7 +17,21 @@
   </head>
   <body>
     <div class="container">
+      <button class="btn btn-default" id="play">Play</button>
+      <div class="row">
+        <div class="col-md-4 ingame-buttons">
+          <button class="btn btn-default" id="roll">Roll</button>
+          <button class="btn btn-default" id="hold">Hold</button>
+        </div>
+        <div class="col-md-8 player-info">
 
+        </div>
+      </div>
+      <div class="output">
+        <p>
+          You rolled a <span id="roll-result"></span> !
+        </p>
+      </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
