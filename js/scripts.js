@@ -12,7 +12,12 @@ Player.prototype.information = function () {
   $("#score").text(this.score);
   $("#turn-total").text(this.turnTotal);
 };
+Player.prototype.gameOver = function () {
+  if (this.score >= 100){
 
+    $(".output").append("<p id='game-over'>GAME OVER! " + this.name + " won!");
+  }
+};
 // user interface logic
 $(document).ready(function(){
   $("#play").click(function(){
@@ -39,6 +44,7 @@ $(document).ready(function(){
     $("#hold").click(function(){
       currentPlayer.score += currentPlayer.turnTotal;
       currentPlayer.turnTotal = 0;
+      currentPlayer.gameOver();
       if (currentPlayer === player1){
         currentPlayer = player2;
       } else { currentPlayer = player1;}
