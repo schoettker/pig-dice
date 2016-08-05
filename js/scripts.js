@@ -36,5 +36,14 @@ $(document).ready(function(){
       $("#roll-result").text(result);
       currentPlayer.information();
     });
+    $("#hold").click(function(){
+      currentPlayer.score += currentPlayer.turnTotal;
+      currentPlayer.turnTotal = 0;
+      if (currentPlayer === player1){
+        currentPlayer = player2;
+      } else { currentPlayer = player1;}
+      currentPlayer.information();
+      $("#roll-result").text("");
+    });
   });
 });
