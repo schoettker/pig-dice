@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Template</title>
+    <title>Pig Dice</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -17,13 +18,24 @@
   </head>
   <body>
     <div class="container">
-      <button class="btn btn-default" id="play">Play</button>
+      <h1>Pig Dice</h1>
+      <div class="wrap-play-button">
+        <button class="btn btn-default" id="play">Play</button>
+      </div>
       <div class="row">
-        <div class="col-md-4 ingame-buttons">
-          <button class="btn btn-default" id="roll">Roll</button>
-          <button class="btn btn-default" id="hold">Hold</button>
+        <div class="col-xs-2 col-xs-offset-2">
+          <div class="ingame-buttons">
+            <button class="btn btn-default" id="roll">Roll</button>
+            <button class="btn btn-default" id="hold">Hold</button>
+          </div>
+          <div class="output">
+            <p id="roll-info">
+              You rolled a <span id="roll-result"></span> !
+            </p>
+          </div>
         </div>
-        <div class="col-md-8 player-info">
+        <div class="col-xs-4 col-xs-offset-4 player-info">
+          <h2>Player Information</h2>
           <ul id="info">
             <li>Current Player: <span id="name"></span></li>
             <li>Score: <span id="score"></span></li>
@@ -31,11 +43,7 @@
           </ul>
         </div>
       </div>
-      <div class="output">
-        <p>
-          You rolled a <span id="roll-result"></span> !
-        </p>
-      </div>
+
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
